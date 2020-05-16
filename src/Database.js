@@ -27,9 +27,9 @@ async login(username, password){
             throw Error("AUTH:NoPasswordPresented")
         }
         password = this.hash(password)
-        console.log('username' , username)
+       
         let result = await this.query("SELECT * from users where password=$1 and username=$2",[password, username])
-        console.log('resultIN AUTH',result)
+       
         if (!result || result.rows.length == 0  ){
             throw Error("AUTH:Unauthorized")
         }
@@ -43,7 +43,6 @@ async addUser(username, password, roles = 'user'){
         throw Error("no password given")
     }
     password = this.hash(password)
-    console.log('password add is', password)
     return this.query("INSERT INTO users (username, password, roles) VALUES($1,$2,$3)",[username, password, `{${roles}}`])
 }
 async deleteUser(username){

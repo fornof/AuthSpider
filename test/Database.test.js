@@ -13,6 +13,7 @@ describe('Array', function() {
         console.log(resultLogin)
         assert(result != undefined)
         assert(resultLogin.rows[0].username == 'username')
+        await spider.db.user.delete('username')
     });
 
   });
