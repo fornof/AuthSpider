@@ -1,0 +1,22 @@
+version: '3'
+services:
+  postgres:
+    environment:
+      POSTGRES_PASSWORD: password123
+      POSTGRES_USER: postgres
+      POSTGRES_DB: db
+      PGDATA: /var/lib/postgresql/data
+    image: postgres
+    volumes:
+    - pgdata:/var/lib/postgresql/data
+    ports:
+    - 5432:5432/tcp
+  
+  redis:
+    image: redis
+    volumes: 
+    - ./redis-data:/data
+    ports: 
+    - 6379:6379
+volumes: 
+     pgdata:

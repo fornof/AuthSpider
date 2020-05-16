@@ -1,0 +1,22 @@
+{
+  "name": "spiderweb",
+  "version": "1.0.0",
+  "description": "A template for user login for a website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Fornof",
+  "license": "MIT",
+  "dependencies": {
+    "jose": "^1.27.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0",
+    "pg": "^8.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2"
+  }
+}

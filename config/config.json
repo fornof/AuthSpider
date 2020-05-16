@@ -1,0 +1,7 @@
+{
+    "secret": "ILikeYou",
+    "port": 3000,
+    "privateKey": null,
+    "expireTime": "1 hour"
+    
+}
