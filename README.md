@@ -23,15 +23,14 @@ login with user :
 ``` curl --location --request POST '0.0.0.0:3030/login' \
 --header 'Content-Type: application/json' \
 --data-raw '{"username":"user", "password": "password"}'```
-verify user with access_token you received : 
-```
-curl --location --request GET 'localhost:3030/verify' \
+
+verify user with access_token you received :
+
+```curl --location --request GET 'localhost:3030/verify' \
 --header 'Authorization: Bearer ACCESS_TOKEN_GOES_HERE' \
 --header 'Content-Type: application/json' \
-
 --data-raw '{"username":"username", "password": "password"}```
-get a 401 if unauthorized or 200 if authorized along with username and roles. 
 
-(optional) access 0.0.0.0:3030/secure with the Authorization Bearer token to see if accessing a secure endpoint works. 
+get a 401 if unauthorized or 200 if authorized along with username and roles. 
 
 
