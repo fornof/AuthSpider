@@ -3,9 +3,8 @@ const crypto = require('crypto')
 const config = require('../config/config.json')
 class Database{
     constructor(){
-        this.config = {}
-        this.config.secret = "SecretTotalllySecretThing12345"
-        this.config.connectionString = 'postgresql://postgres:password123@localhost:5432/db'
+        this.config = config
+  
         this.user = { add: this.addUser.bind(this),
                      delete: this.deleteUser.bind(this),
                      login: this.login.bind(this)

@@ -11,4 +11,5 @@ checkout config/config.json and make sure the postgresql connection string is co
 
 5. Please look at the tests. hopefully they are all running. ``` mocha test ```
 
+6. if you want to run this locally, change the config/config.json to use localhost as the server instead of postgres
 
