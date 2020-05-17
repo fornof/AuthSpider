@@ -16,7 +16,7 @@ if you want to run this locally, change the config/config.json to use localhost 
 
 create a user by doing  ``` docker exec spiderweb_auth_1 /bin/sh -c "node AddUser.js user password user,admin" ``` user,admin are a list of comma separated roles, default is user
 
-example commands: 
+# example commands: 
 set user: 
 ``` docker exec spiderweb_auth_1 /bin/sh -c "node AddUser.js user password user,admin" ```
 login with user : 
